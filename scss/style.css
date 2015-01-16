@@ -1140,7 +1140,8 @@ h1.d {
   top: 0;
   padding: 0;
   float: none;
-  border: none; }
+  border: none;
+  width: 40%; }
   .story-panel article {
     height: 100%; }
     .story-panel article iframe {
