@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link type="text/css" rel="stylesheet" href="https://fast.fonts.net/cssapi/2e2ee3e1-ebfd-435c-9ac6-52f1b2018a3d.css"/>
+        <link rel="stylesheet" href="scss/style.css" type="text/css" />
+        
+        <script src="http://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+        <script src="js/pace.min.js" type="text/javascript"></script>
+        
+        <!-- GSAP -->
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.15.0/plugins/CSSPlugin.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.15.0/plugins/ScrollToPlugin.min.js"></script>
+        
+
+    </head>
+    
+    <body>
+        <div id="outerContainer">
+            <button class="menu" id="menu"><h3><span>&#x2261;</span> MENU</h3></button>
+            
+            <div class="navArrows" id="navArrows">
+                <img src="img/Up_Arrow.fw.png" class="navArrow navUp" id="navUp" />
+                <img src="img/Down_Arrow.fw.png"class="navArrow navDown" id="navDown" />
+            </div>
+            
+            <!--<div class="blueSquare" id="blueSquare"></div>-->
+            <!-- Intro -->
+            <section class="slide slide1" id="slide0"> 
+                <div class="bg-set fadeIn" id="introFade">
+                    <div id="loader"></div>
+                    
+                    <div class="bg-set homeCrisp" id="loading">
+                        <div class="overlay intro">
+                            <div class="bg-set kidsBG" id="kids">
+                                <div class="content">
+                                    <img src="img/0_Home_logo.png" class="logo relative" id="logo1" />
+                                    <img src="img/0_Home_Title.png" class="title" id="title" />
+                                    <div class="heroText" id="heroText">
+                                        <h3 id="heroCA1" class="relative">Compassion Australia</h3>
+                                        <h4 id="heroCA2" class="relative">2013/14</h4>
+                                    </div>
+                                    <img src="img/0_Home_kids_tiny.png" class="introKids relative" id="introKids" />
+                                    <div id="downButton"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Message -->
+            <section class="slide slide2" id="slide1">
+                <div class="content">
+                    <h1 class="d relative">Let’s take a look<br /> at the year.</h1>
+                </div> 
+            </section>
+            
+            <!-- Sponsorship -->
+            <section class="slide slide3 sponsorshipSpectrum" id="slide2">
+                <div class="overlay">
+                    <div class="content">
+                        <h1 id="sponsorshipNumber" class="s relative">0</h1>
+                        <p class="large-paragraph relative" id="sponsorshipText">Children sponsored worldwide</p>
+                        <!-- There will be three stats here, essentially three slides -->
+                    </div> 
+                </div>
+            </section>
+            
+            <!-- Message -->
+            <section class="slide slide6" id="slide3">
+                <div class="content">
+                    <h1 class="s">You changed lives.</h1>
+                </div> 
+            </section>
+            
+            
+            <!-- Story -->
+            <section class="slide slide7 story1" id="slide4">
+                <img src="img/1_Sponsor_Story_Kids_tiny.png" class="relative" />
+                <div class="darken"></div>
+                <div class="story-box" id="storyBox1">
+                    <h2>JULIUS'S STORY</h2>
+                    <p class="small-paragraph">
+                        When their mother died, Julius's grandma took the seven year old and his younger brother, Joseph, in. Their grandma worked hard in their Kenyan community as a farm labourer, but her small wage meant she struggled to put food on the table for her two growing grandsons.
+                    </p>
+                    <button id="story1Btn"><h4>READ MORE</h4></button>
+                </div>
+                <div class="story-panel" id="storyContent1">
+                    <article>
+                        <button class="close" id="story1Close"><img src="img/Cross.fw.png" /></button>
+                        
+                        <iframe src="stories/CDSP_Story.html" frameborder="0" ></iframe>
+                    </article>
+                </div>
+            </section>
+            
+            <!-- Message -->
+            <section class="slide slide8" id="slide5">
+                <div class="content">
+                    <h1 class="d">You wrote a <br />lot of letters!</h1>
+                </div> 
+            </section>
+            
+            <!-- Letter Writing -->
+            <section class="slide slide9 letterWritingPaper" id="slide6">
+                <div class="overlay">
+                    <div class="content" id="world">
+                        <div class="" id="lettersContainer">
+                            <h1 id="lettersNum" class="s">0</h1>
+                            <p class="large-paragraph relative" id="lettersText">letters written this year</p>
+                            <!-- This counts as 5 slides due to 5 stats -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Message -->
+            <section class="slide slide14" id="slide7">
+                <div class="content">
+                    <h1 class="d">And they made a <br />huge difference.
+</h1>
+                </div> 
+            </section>
+            
+            
+            <!-- Story -->
+            <section class="slide slide15 story2" id="slide8">
+                <img src="img/2_LetterWriting_Story_Kids_tiny.png" />
+                <div class="darken"></div>
+                <div class="story-box" id="storyBox2">
+                    <h2>LOVE LETTERS</h2>
+                    <p class="small-paragraph">
+                        In financial year 2014, Australian sponsors sent over 162,000 letters to sponsored children around the world. Three very different people: a 70-year-old translator from Thailand, a young boy from Honduras, and a university student from Brazil describe the impact that sponsors' letters have had on their lives.
+                    </p>
+                    <button id="story2Btn"><h4>READ MORE</h4></button>
+                </div>
+                <div class="story-panel" id="storyContent2">
+                    <article>
+                        <button class="close" id="story2Close"><img src="img/Cross.fw.png" /></button>
+                        <iframe src="stories/Letter_Story.html" frameborder="0" ></iframe>
+                    </article>
+                </div>
+            </section>
+            
+            
+            <!-- Message -->
+            <section class="slide slide16" id="slide9">
+                <div class="content">
+                    <h1 class="d">Let’s take a look<br /> at the numbers.</h1>
+                </div> 
+            </section>
+            
+            <!-- Revenue -->
+            <section class="slide slide17" id="slide10">
+                <div class="overlay">
+                    <div class="leftContent" id="financeLeft">
+                        <div class="" id="incomeContainer">
+                                <h2>INCOME</h2>
+                                <h1 id="revenueTotal">$72,004,726</h1>
+                                <p class="large-paragraph" id="revenueText">raised this year</p>
+
+                        </div>
+                    </div>
+                    <div class="rightContent" id="financeRight">
+                        <div id="revenueGraph">
+                            <div class="innerCircle">
+                                <img src="img/3_Finance_Income_IconCDSP_white.png" id="revenueIcon" />
+                                <p class="large-paragraph number" id="revenueNum">$53,711,971</p>
+                                <p class="large-paragraph text" id="revenueName">Child Sponsorship Program</p>
+                            </div>
+                            <div class="financeIcons">
+                                <ul class="rev">
+                                    <li><div class="circle r1"><img src="img/3_Finance_Income_IconCDSP_tiny.png"></div></li>
+                                    <li><div class="circle r2"><img src="img/3_Finance_Income_IconCIV_tiny.png"></div></li>
+                                    <li><div class="circle r3"><img src="img/3_Finance_Income_IconOther_tiny.png"></div></li>
+                                    <li><div class="circle r4"><img src="img/3_Finance_Income_IconGift_tiny.png"></div></li>
+                                    <li><div class="circle r5"><img src="img/3_Finance_Income_IconChristmas_tiny.png"></div></li>
+                                    <li><div class="circle r6"><img src="img/3_Finance_Income_IconCSP_tiny.png"></div></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>  
+            
+            <!-- Expenditure -->
+            <section class="slide slide18" id="slide11">
+                <div class="overlay">
+                    <div class="leftContent" id="financeLeft">
+                        <div class="" id="expenditureContainer">
+                                <h2>EXPENDITURE</h2>
+                                <h1 id="expenditureTotal">$70,244,245</h1>
+                                <p class="large-paragraph" id="expenditureText">spent this year</p>
+
+                        </div>
+                    </div>
+                    <div class="rightContent" id="financeRight">
+                        <div id="expenditureGraph">
+                            <div class="innerCircle">
+                                <img src="img/3_Finance_Expenditure_IconProgram_white.png" id="revenueIcon" />
+                                <p class="large-paragraph number" id="revenueNum">$55,044,223</p>
+                                <p class="large-paragraph text" id="revenueName">Program</p>
+                            </div>
+                            <div class="financeIcons">
+                                <ul class="exp">
+                                    <li><div class="circle e1"><img src="img/3_Finance_Expenditure_IconProgram_tiny.png"></div></li>
+                                    <li><div class="circle e2"><img src="img/3_Finance_Expenditure_IconFundraising_tiny.png"></div></li>
+                                    <li><div class="circle e3"><img src="img/3_Finance_Expenditure_IconAdmin_tiny.png"></div></li>
+                                    <li><div class="circle e4"><img src="img/3_Finance_Expenditure_IconEducation_tiny.png"></div></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+              
+            <!-- Message -->
+            <section class="slide slide19" id="slide12">
+                <div class="content">
+                    <h1 class="s">Together, we grew!</h1>
+                </div> 
+            </section>   
+                
+            <!-- Revenue Growth % -->
+            <section class="slide slide20" id="slide13">
+                <video loop="loop" id="growthBgVid" class="bg-video">
+                    <source src="media/Balloons.webm" type="video/webm">
+                    <source src="media/Balloons.mp4" type="video/mp4">
+                </video>
+                <div class="content overlay" id="bgVideoOverlay">
+                    <div id="revGrowth">
+                        <h1 class="s">
+                            <span id="growthA">0.00</span>%
+                            <!--5.69%-->
+                        </h1>
+                        <p class="large-paragraph relative">revenue growth</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Message -->
+            <section class="slide slide21" id="slide14">
+                <div class="content">
+                    <h1 class="d">You responded to disaster.</h1>
+                </div> 
+            </section>
+            
+            <!-- Story -->
+            <section class="slide slide22 story3" id="slide15">
+                <img src="img/3_Finance_Story_Kids_tiny.png" />
+                <div class="darken"></div>
+                <div class="story-box" id="storyBox2">
+                    <h2>MICHAELA'S STORY</h2>
+                    <p class="small-paragraph">
+                        On 8 November 2013, one of the strongest tropical cyclones on record hit the Philippines. Thousands of Compassion supporters gave generously; raising $679,000 to help Filipinos survive the initial disaster and get back on their feet. 
+                    </p>
+                    <button id="story3Btn"><h4>READ MORE</h4></button>
+                </div>
+                <div class="story-panel" id="storyContent3">
+                    <article>
+                        <button class="close" id="story3Close"><img src="img/Cross.fw.png" /></button>
+                        <iframe src="stories/Philippines_Story.html" frameborder="0" ></iframe>
+                    </article>
+                </div>
+            </section>
+            
+            
+            <!-- Message -->
+            <section class="slide slide23" id="slide16">
+                <div class="content">
+                    <h1 class="d">Check out some highlights.</h1>
+                </div> 
+            </section>
+            
+            
+            <!-- Highlights -->
+            <section class="slide slide24" id="slide17">
+                <div class="content programHighlights">
+                    <div class="expander">
+                        <article data-expand="neutral" class="advocates four">
+                            <div class="overlay">
+                                <div class="HLcontent">
+                                    <img src="img/4_Highlights_ProgramIcons_Advocate_Large.png" />
+                                    <h2>2,757</h2>
+                                    <p class="large-paragraph">Compassion advocates</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article data-expand="neutral" class="CIV four">
+                            <div class="overlay">
+                                <div class="HLcontent">
+                                    <img src="img/4_Highlights_ProgramIcons_CIV_Large.png" />
+                                    <h2>$8,619,793</h2>
+                                    <p class="large-paragraph">raised for <br />Critical Interventions</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article data-expand="neutral" class="CSP four">
+                            <div class="overlay">
+                                <div class="HLcontent">
+                                    <img src="img/4_Highlights_ProgramIcons_CSP_Large.png" />
+                                    <h2>5,089</h2>
+                                    <p class="large-paragraph">caregivers and babies supported through the Child Survival Program</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article data-expand="neutral" class="LDP four">
+                            <div class="overlay">
+                                <div class="HLcontent">
+                                    <img src="img/4_Highlights_ProgramIcons_LDP_Large.png" />
+                                    <h2>177</h2>
+                                    <p class="large-paragraph">leaders educated, <br />trained and discipled</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div> 
+            </section>
+            
+            <!-- Message -->
+            <section class="slide slide25" id="slide18">
+                <div class="content">
+                    <h1 class="d">Here’s how we <br />worked together.</h1>
+                </div> 
+            </section>
+            
+            
+            <!-- Highlights -->
+            <section class="slide slide26" id="slide19">
+                <div class="content productHighlights">
+                    <div class="expander">
+                        <article data-expand="neutral" class="Sunday five">
+                            <div class="overlay">
+                                <div class="HLcontent">
+                                    <img src="img/4_Highlights_ProductIcons_CSunday_large.png" />
+                                    <h2>448</h2>
+                                    <p class="large-paragraph">children sponsored through Compassion Sunday events</p>
+                                </div>
+                            </div>
+                        </article><!--
+                        <article data-expand="neutral" class="Trips five">
+                            <div class="overlay">
+                                <div class="HLcontent">
+                                    <img src="img/4_Highlights_ProductIcons_Trip_large.png" />
+                                    <h2>?</h2>
+                                    <p class="large-paragraph">trips to the field</p>
+                                </div>
+                            </div>
+                        </article> -->
+                        <article data-expand="neutral" class="howRedic five">
+                            <div class="overlay">
+                                <div class="HLcontent">
+                                    <img src="img/4_Highlights_ProductIcons_HowRidic_large.png" />
+                                    <h2>$6,354</h2>
+                                    <p class="large-paragraph">raised by How Ridiculous</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article data-expand="neutral" class="Churches five">
+                            <div class="overlay">
+                                <div class="HLcontent">
+                                    <img src="img/4_Highlights_ProductIcons_Church_large.png" />
+                                    <h2>288</h2>
+                                    <p class="large-paragraph">new church <br />relationships formed</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div> 
+            </section>
+            
+            
+            <!-- Message -->
+            <section class="slide slide27" id="slide20">
+                <div class="content">
+                    <h1 class="d">A message <br />from our CEO.</h1>
+                </div> 
+            </section>
+            
+            <!-- Tim's letter -->
+            <section class="slide slide28" id="slide21">
+                <div class="content">
+                    <img src="img/5_Thankyou_Tim_tiny.png" class="relative" />
+                    <div class="tim-message">
+                        <article>
+                        <h2>From Tim Hanna</h2>
+                            <p class="story-paragraph">
+                                What an amazing and humbling year this one has been. Again and again, I’ve seen and heard of the incredibly generous and selfless ways that Compassion supporters across Australia have made a difference in the lives of the world’s most vulnerable: children living in poverty. 
+                            </p>
+                            <p class="story-paragraph">
+                                As I look back on our biggest revenue year yet, I can only be thankful. I’m humbled by our supporters, who continue to give even in difficult times; by our staff who consistently bring their best efforts to work; by our volunteers and Advocates, who tirelessly and selflessly speak up for children in need. Most of all, I am thankful to God, who continues to show His grace and love to each of us&mdash;particularly vulnerable children living in poverty.
+                            </p>
+                            
+                            <p class="story-paragraph img">
+                                <img src="img/5_Thankyou_Tim_signature_tiny.png" />
+                            </p>
+                            <p class="story-paragraph">
+                                Tim Hanna<br />
+                                Compassion Australia CEO
+                            </p>
+                        </article>
+                    </div>
+                </div> 
+            </section>
+            
+                
+            <!-- Message -->
+            <section class="slide slide29" id="slide22">
+                <div class="content">
+                    <h1 class="d tt">We couldn’t have <br />done it without you!</h1>
+                </div> 
+            </section>
+            
+            <!-- Verse -->
+            <section class="slide slide30 bibleVerse" id="slide23">
+                <div class="overlay bibleVerseOL">
+                    <div id="bibleVerseTrigger">
+                        <div id="bibleVerseAnimate"></div>
+                    </div>
+                </div>
+            </section>  
+        </div> 
+        
+        <nav class="navigation" id="footer">
+            
+            <div class="container" style="">
+                <!--<div class="range">
+                    <input type="range" min="0" max="10000" value="0" id="navRange"/>
+                </div> -->
+                <!--<div class="actionIcons icons"> 
+                    <ul>
+                        <li><img src="img/Z_MenuIcons_Download.svg" /></li>
+                        <li><img src="img/Z_MenuIcons_Print.svg" /></li>
+                    </ul>
+                </div> -->   
+                <aside>
+                    <ul>
+                        <li><h3>Introduction</h3></li>
+                        <li><h3>Child Sponsorship</h3></li>
+                        <li><h3>Julius's Story</h3></li>
+                        <li><h3>Letter Writing</h3></li>
+                        <li><h3>Love Letters</h3></li>
+                        <li><h3>Income and Expenditure</h3></li>
+                        <li><h3>Growth</h3></li>
+                        <li><h3>Michaela's Story</h3></li>
+                        <li><h3>Program Highlights</h3></li>
+                        <li><h3>Product Highlights</h3></li>
+                        <li><h3>Message from our CEO</h3></li>
+                        <li><h3>Thank You</h3></li>
+                    </ul>
+                </aside>
+                <div class="navigationIcons icons"> 
+                    <ul>
+                        <li><a href="http://auproddownloads.blob.core.windows.net/compassion/Compassion/website/annual_reports/Compassion_Australia_2014_Annual_Report.pdf?_ga=1.213403222.390033094.1406526875" download="Compassion Australia Annual Report 2014"><img src="img/Z_MenuIcons_Download.svg" /><h3>Download</h3></a></li>
+                        <li><a href="http://auproddownloads.blob.core.windows.net/compassion/Compassion/website/annual_reports/Compassion_Australia_2014_Annual_Report.pdf?_ga=1.213403222.390033094.1406526875"><img src="img/Z_MenuIcons_Print.svg" /><h3>Print</h3></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Scroll Magic 
+        <script src="js/jquery.scrollmagic.js" type="text/javascript"></script>
+        <script src="js/jquery.scrollmagic.debug.js" type="text/javascript"></script>-->
+        
+        <!-- Smooth Scrolling -->
+        <script src="js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <!--<script src="js/simplr-smoothscroll.js" type="text/javascript"></script>
+        <script src="js/styl.js" type="text/javascript"></script> -->
+        
+        <!-- Animations -->
+        <script src="js/animations.js" type="text/javascript"></script>
+        
+        <!-- Trigger intro on finish load -->
+        <script type="text/javascript">
+            Pace.once("done", function() { slideShow.play(); });
+            $("body").css("overflow", "hidden");
+        </script>
+        
+        <!-- Trigger intro on finish load -->
+        <script type="text/javascript">
+            $(document).bind('mousewheel', function(e) {
+                if(e.originalEvent.wheelDelta / 120 > 0) {
+                    reverseTL();
+                    flash("#navUp");
+                } else {
+                    advanceTL();
+                    flash("#navDown");
+                }
+            });
+            
+            $(document).keydown(function(e) {
+                switch(e.keyCode) {
+                    case 32: // Space
+                        $("#navDown").addClass("hover");
+                        advanceTL();
+                        //nextSlide();
+                        break;
+                    case 40: // Down
+                        $("#navDown").addClass("hover");
+                        advanceTL();
+                        //nextSlide();
+                        break;
+                    case 39: // Right
+                        $("#navDown").addClass("hover");
+                        advanceTL();
+                        break;
+                    case 38: // Up
+                        $("#navUp").addClass("hover");
+                        reverseTL();
+                        //previousSlide();
+                        break;
+                    case 37: // Left
+                        $("#navUp").addClass("hover");
+                        reverseTL();
+                        break;
+                    default:
+                        break;
+                }
+            });
+            $(document).keyup(function(e) {
+                switch(e.keyCode) {
+                    case 32: // Space
+                        $("#navDown").removeClass("hover");
+                        break;
+                    case 40: // Down
+                        $("#navDown").removeClass("hover");
+                        break;
+                    case 39: // Right
+                        $("#navDown").removeClass("hover");
+                        break;
+                    case 38: // Up
+                        $("#navUp").removeClass("hover");
+                        break;
+                    case 37: // Left
+                        $("#navUp").removeClass("hover");
+
+                        break;
+                    default:
+                        break;
+                }
+            });
+            
+        </script>
+    </body>
+    
+</html>

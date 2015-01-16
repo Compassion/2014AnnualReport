@@ -1,0 +1,126 @@
+.slide1 {
+    background: url(/img/0_Home_Background_blur.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    
+    .fadeIn {
+        background: url(/img/0_Home_Background_crisp.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+        height: 100%;
+        opacity: 0;
+    }
+}
+.slide2 {
+    background-color: #0054ab;
+}
+.slide3 {
+    background: url(/img/1_Sponsor_Background_square_A.jpg);
+    background-attachment: fixed;
+    background-size: 1600px 1600px;
+    background-position: center center;
+    
+    .overlay {
+        @include linear-gradient(rgba(0,108,255,0.5), rgba(0,170,255,0.5), $fallback: transparent);
+        //@include linear-gradient(rgba(0,170,255,0.5), rgba(0,234,255,0.5), $fallback: transparent);
+        height: 100%;
+    }
+    
+}
+.slide4 {}
+.slide5 {}
+.slide6 {
+    background-color: #00eaff;
+}
+.slide7 {
+    background: url(/img/1_Sponsor_Story_Background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.slide8 {
+    background-color: #ffba00;
+}
+.slide9 {
+    background: url(/img/2_Letterwriting_Background.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    
+    .overlay {
+        @include linear-gradient(rgba(255,168,0,0.5), rgba(255,128,0,0.5), $fallback: transparent);
+        height: 100%;
+    }
+}
+.slide14 {
+    background-color: #e13838;
+}
+.slide15 {
+    background: url(/img/2_LetterWriting_Story_Background.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+.slide16 {
+    background-color: #38e188;
+}
+.slide17 {
+    background: url(/img/3_Finance_Background.jpg);
+    background-attachment: fixed;
+        
+    .overlay {
+        background-color: rgba(0,255,120,0.5);
+        height: 100%;
+    }
+}
+.slide18 {
+    background: url(/img/3_Finance_Background.jpg);
+    background-attachment: fixed;
+        
+    .overlay {
+        background-color: rgba(85,255,0,0.5);
+        height: 100%;
+    }
+}
+.slide19 {
+    background-color: #88e55a;
+}
+.slide20 {
+    // Video
+    
+    .overlay {
+        background-color: rgba(186,255,0,0.5);
+        height: 100%;
+    }
+}
+
+.slide21 {
+    background-color: #f0eb60;
+}
+.slide22 {
+    background: url(/img/3_Finance_Story_Background.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+.slide23 {
+    background-color: #ffd65c;
+}
+.slide24 { background-color: #f2f2f2; }
+.slide25 {
+    background-color: #ffb05c;
+}
+.slide26 { background-color: #f2f2f2; }
+.slide27 {
+    background-color: #5cd5ff;
+}
+.slide28 {
+    background: url(/img/5_Thankyou_Tim_Background.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+.slide29 {
+    background-color: #0054a6;
+}
+.slide30 {
+    background: url(/img/5_Thankyou_BibleVerse_Background.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
