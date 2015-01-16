@@ -293,7 +293,7 @@ function slideIn(storyNum) {
 
 // Money Timelines
 
-var frameHeightRG1 = 954, 
+var frameHeightRG1 = 960, 
     frameWidthRG1 =   960,
     numColsRG1 = 1, 
     numRowsRG1 = 7;
@@ -552,7 +552,7 @@ slideShow
         .to("#introFade", 2, {opacity: 1, onReverseComplete: rStop}, "+=1")
       .from("#introKids", 1, {opacity: 0, bottom: -10}, "-=1")
        .add(TweenMax.staggerFrom(["#logo1", "#title"], 1, { opacity: 0, bottom: -20 }, 1), "+=1")
-       .add(TweenMax.staggerFrom(["#heroText h3", "#heroText h4", "#downButton"], 1, { opacity: 0, bottom: -20 }, 0.25))
+       .add([TweenMax.staggerFrom(["#heroText h3", "#heroText h4"], 1, { opacity: 0, bottom: -20 }, 0.25), TweenMax.from("#downButton", 1, { opacity: 0 })])
 
         // Slide 1 - Message
   .addPause()
@@ -605,8 +605,8 @@ slideShow
         // Slide 5 - Message
   .addPause()
   .addLabel("slide5")
-        .to("#slide4 .story-box", 0.5, { opacity: 0, top: 20, onComplete: slideIn, onCompleteParams: [4] })
-      .from("#slide5 h1", 1,  {opacity: 0, bottom: -40,  onStart: seekSlide, onStartParams: [5], onComplete : worldToggle, onReverseComplete: seekSlide, onReverseCompleteParams: [4] }) // Fade in
+        .to("#slide4 .story-box", 0.5, { opacity: 0, top: 20 })
+      .from("#slide5 h1", 1,  {opacity: 0, bottom: -40, onStart: seekSlide, onStartParams: [5], onComplete : worldToggle, onReverseComplete: seekSlide, onReverseCompleteParams: [4] }) // Fade in
         
 
         // Slide 6 - Letter Writing
