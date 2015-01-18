@@ -598,9 +598,8 @@ slideShow
   .addPause()
   .addLabel("slide4")
         .to("#slide3 h1", 0.5, { opacity: 0,  top: "+=10", onStart: seekSlide, onStartParams: [4]}) // Fade out
-        //.to("#slide4", 5, { backgroundSize: "+=3% +=3%", backgroundPosition: "+=50% +=50%" })
       .from("#slide4 .story-box", 1, { opacity: 0, top: 20 })
-      .from("#slide4 > img", 0.5, { top: 5, onReverseComplete: seekSlide, onReverseCompleteParams: [3] })
+      .to("#slide4 > img", 0.5, { bottom: "-=60px", onReverseComplete: seekSlide, onReverseCompleteParams: [3]}, "-=1")
 
         // Slide 5 - Message
   .addPause()
@@ -657,13 +656,15 @@ slideShow
         // Slide 7 - Message
   .addPause()
   .addLabel("slide7")
-      .from("#slide7 h1", 1, {opacity: 0, bottom: -40, onStart: seekSlide, onStartParams: [7],  onReverseComplete: seekSlide, onReverseCompleteParams: [6]}, "+=0.5") // Fade in
+        .to("#lettersText", 0.5, { opacity: 0,  top: "+=10" })
+        .to("#lettersNum", 0.5, { opacity: 0,  top: "+=10", onComplete: seekSlide, onCompleteParams: [7] } , "-=0.5")
+      .from("#slide7 h1", 1, {opacity: 0, bottom: -40,  onReverseComplete: seekSlide, onReverseCompleteParams: [6]}, "+=0.5") // Fade in
 
         // Slide 8 - Story 2
   .addPause()
   .addLabel("slide8")
         .add([TweenLite.to("#slide7 h1", 0.5, { opacity: 0,  top: "+=10", onStart: seekSlide, onStartParams: [8]}),
-              TweenLite.from("#slide8 > img", 1.5, { bottom: 120 }), 
+              TweenLite.fromTo("#slide8 > img", 1.5, { bottom: 120 }, { bottom: "-40px" }), 
               TweenLite.from("#slide8 .story-box", 1.5, { top: 320 })
              ])
         .to("#slide8", 0.1, { onReverseComplete: seekSlide, onReverseCompleteParams: [7] })

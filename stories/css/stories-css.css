@@ -292,7 +292,7 @@ h5 {
     width: 100%;
     height: auto;
     margin: auto;
-    padding: 100px 100px 60px 80px;
+    padding: 100px 100px 60px 100px;
 }
 
 .story-title {
@@ -307,7 +307,7 @@ h5 {
 }
 
 .story-intro {
-  font-family: "Tetria LT W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Tetria LT W01 Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 22px;
   font-weight: 700;  
   text-align: center;
