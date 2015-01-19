@@ -1,4 +1,3 @@
-
 // data
 
 var sponsLetter = [
@@ -7,10 +6,10 @@ var sponsLetter = [
         "number": 0 
     },
     { 
-        "text": "children sponsored this year", 
+        "text": "children sponsored by Australians this year", 
         "number": 8436 //p72 
     }, { 
-        "text": "children sponsored by Australians", 
+        "text": "children sponsored by Australians in total", 
         "number": 100996
     }, { 
         "text": "children sponsored worldwide", 
@@ -572,14 +571,14 @@ slideShow
 
         // Count Slide 3 part 2
   .addPause()
-        .to("#sponsorshipText", 0.5, {opacity: 0, bottom: "-=20", onComplete: updateText, onCompleteParams: [sponsLetter, 2, "sponsorshipText"]})
+        .to("#sponsorshipText", 0.5,  {opacity: 0, bottom: "-=20", onComplete: updateText, onCompleteParams: [sponsLetter, 2, "sponsorshipText"], onReverseComplete: updateText, onReverseCompleteParams: [sponsLetter, 1, "sponsorshipText"]})
        .add([TweenLite.to(numberCounter, 4, { number: sponsLetter[2].number, roundProps:"number", onUpdate: updateCounter, onUpdateParams: ["sponsorshipNumber"], ease:Linear.easeNone}),
              TweenLite.to("#slide2", 5, { backgroundSize: "900px 900px" }),
              TweenLite.to("#sponsorshipText", 4, { opacity: 1,  bottom: "+=20" })])
 
         // Count Slide 3 part 3
   .addPause()
-        .to("#sponsorshipText", 0.5, {opacity: 0, bottom: "-=20", onComplete: updateText, onCompleteParams: [sponsLetter, 3, "sponsorshipText"]})
+        .to("#sponsorshipText", 0.5, {opacity: 0, bottom: "-=20", onComplete: updateText, onCompleteParams: [sponsLetter, 3, "sponsorshipText"], onReverseComplete: updateText, onReverseCompleteParams: [sponsLetter, 2, "sponsorshipText"]})
        .add([TweenLite.to(numberCounter, 5, { number: sponsLetter[3].number, roundProps:"number", onUpdate: updateCounter, onUpdateParams: ["sponsorshipNumber"], ease:Linear.easeNone}),
              TweenLite.to("#slide2", 6, { backgroundSize: "400px 400px" }),
              TweenLite.to("#sponsorshipText", 4, { opacity: 1, bottom: "+=20" })])
@@ -818,12 +817,12 @@ $("#footer aside li:nth-child(2)").click(function() {
     slideShow.play("slide1"); }, 100);
 });
 $("#footer aside li:nth-child(3)").click(function() {
-    slideShow.play("slide4");
+    slideShow.play("slide2");
     setTimeout(
   function() 
   {
-    seekSlide(4);
-    slideShow.play("slide4"); }, 100);
+    seekSlide(2);
+    slideShow.play("slide2"); }, 100);
 });
 $("#footer aside li:nth-child(4)").click(function() {
     slideShow.play("slide5");
@@ -834,6 +833,14 @@ $("#footer aside li:nth-child(4)").click(function() {
     slideShow.play("slide5"); }, 100);
 });
 $("#footer aside li:nth-child(5)").click(function() {
+    slideShow.play("slide6");
+    setTimeout(
+  function() 
+  {
+    seekSlide(6);
+    slideShow.play("slide6"); }, 100);
+});
+$("#footer aside li:nth-child(6)").click(function() {
     slideShow.play("slide8");
     setTimeout(
   function() 
@@ -841,7 +848,7 @@ $("#footer aside li:nth-child(5)").click(function() {
     seekSlide(8);
     slideShow.play("slide8"); }, 100);
 });
-$("#footer aside li:nth-child(6)").click(function() {
+$("#footer aside li:nth-child(7)").click(function() {
     slideShow.play("slide9");
     setTimeout(
   function() 
@@ -849,7 +856,23 @@ $("#footer aside li:nth-child(6)").click(function() {
     seekSlide(9);
     slideShow.play("slide9"); }, 100);
 });
-$("#footer aside li:nth-child(7)").click(function() {
+$("#footer aside li:nth-child(8)").click(function() {
+    slideShow.play("slide10");
+    setTimeout(
+  function() 
+  {
+    seekSlide(10);
+    slideShow.play("slide10"); }, 100);
+});
+$("#footer aside li:nth-child(9)").click(function() {
+    slideShow.play("slide11");
+    setTimeout(
+  function() 
+  {
+    seekSlide(11);
+    slideShow.play("slide11"); }, 200);
+});
+$("#footer aside li:nth-child(10)").click(function() {
     slideShow.play("slide13");
     setTimeout(
   function() 
@@ -857,7 +880,7 @@ $("#footer aside li:nth-child(7)").click(function() {
     seekSlide(13);
     slideShow.play("slide13"); }, 100);
 });
-$("#footer aside li:nth-child(8)").click(function() {
+$("#footer aside li:nth-child(11)").click(function() {
     slideShow.play("slide15");
     setTimeout(
   function() 
@@ -865,7 +888,7 @@ $("#footer aside li:nth-child(8)").click(function() {
     seekSlide(15);
     slideShow.play("slide15"); }, 100);
 });
-$("#footer aside li:nth-child(9)").click(function() {
+$("#footer aside li:nth-child(12)").click(function() {
     slideShow.play("slide16");
     setTimeout(
   function() 
@@ -873,15 +896,23 @@ $("#footer aside li:nth-child(9)").click(function() {
     seekSlide(16);
     slideShow.play("slide16"); }, 100);
 });
-$("#footer aside li:nth-child(10)").click(function() {
-    slideShow.play("slide18");
+$("#footer aside li:nth-child(13)").click(function() {
+    slideShow.play("slide17");
     setTimeout(
   function() 
   {
-    seekSlide(18);
-    slideShow.play("slide18"); }, 100);
+    seekSlide(17);
+    slideShow.play("slide17"); }, 100);
 });
-$("#footer aside li:nth-child(11)").click(function() {
+$("#footer aside li:nth-child(14)").click(function() {
+    slideShow.play("slide19");
+    setTimeout(
+  function() 
+  {
+    seekSlide(19);
+    slideShow.play("slide19"); }, 100);
+});
+$("#footer aside li:nth-child(15)").click(function() {
     slideShow.play("slide20");
     setTimeout(
   function() 
@@ -889,12 +920,12 @@ $("#footer aside li:nth-child(11)").click(function() {
     seekSlide(20);
     slideShow.play("slide20"); }, 100);
 });
-$("#footer aside li:nth-child(12)").click(function() {
-    slideShow.play("slide22");
+$("#footer aside li:nth-child(16)").click(function() {
+    slideShow.play("slide21");
     setTimeout(
   function() 
   {
-    seekSlide(22);
-    slideShow.play("slide22"); }, 100);
+    seekSlide(21);
+    slideShow.play("slide21"); }, 100);
 });
 
