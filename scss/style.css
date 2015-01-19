@@ -903,6 +903,59 @@ body {
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   body {
     font-size: 12px; } }
+body.mobBod {
+  overflow: auto;
+  height: 100%; }
+
+#mobileContainer {
+  background: url(/img/0_Home_Background_crisp.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100%;
+  overflow: hidden; }
+  #mobileContainer #kids {
+    background: url(/img/0_Home_kids_tiny.png);
+    background-repeat: no-repeat;
+    background-size: 65%;
+    background-attachment: fixed;
+    background-position: bottom center;
+    height: 100%; }
+    @media screen and (max-device-width: 480px) and (min-device-width: 320px) {
+      #mobileContainer #kids {
+        background-size: 150%; } }
+  #mobileContainer #logo1 {
+    padding: 2em 0 2em;
+    width: 150px;
+    margin: 0 auto; }
+  #mobileContainer #title {
+    padding-top: 1em;
+    margin: 0 auto 0.5em; }
+  #mobileContainer #introKids {
+    padding-top: 4em; }
+  @media screen and (max-device-width: 480px) and (min-device-width: 320px) {
+    #mobileContainer #heroCA1 {
+      display: none; } }
+  @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    #mobileContainer #heroCA1 {
+      display: block; } }
+  #mobileContainer img {
+    max-width: 100%; }
+  #mobileContainer .content {
+    position: relative; }
+  #mobileContainer .mobMessage {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 2em 1em;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 200; }
+    #mobileContainer .mobMessage p {
+      text-align: center;
+      margin: 0; }
+      #mobileContainer .mobMessage p a {
+        color: white; }
+
 #outerContainer {
   height: 100%;
   min-width: 1024px;
