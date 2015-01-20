@@ -21,13 +21,13 @@ var sponsLetter = [
         "text": "letters written online", 
         "number": 2
     }, { 
-        "text": "letters written this year", 
+        "text": "sponsor letters written this year", 
         "number": 162825
     }, { 
         "text": "Christmas cards sent this year", 
         "number": 51126
     }, { 
-        "text": "of children receiving at least<br /> two sponsor letters per year", 
+        "text": "of children received at least<br /> two sponsor letters this year", 
         "number": 41
     },
 ];
@@ -324,6 +324,7 @@ for(var i=0 ;i < numRowsEG1;i++){
 
 // JQUERY STUFF
 $("#navDown").click(function() {
+        TweenLite.to(".arrow_container", 0.5, {opacity: 0 });
         advanceTL();
     } 
 );
@@ -508,7 +509,7 @@ menu//.set("nav", { onComplete: buttonHide })
     .from("nav", 0.4, { left: -400 })
     .to("#menu", 0.1, {opacity: 0 }, "-=0.5")
     .add(TweenMax.staggerFrom($("nav aside li"), 0.15, { opacity: 0, top: 20}, 0.05))
-    .from($("nav .icons"), 0.5, { opacity: 0}, "-=1"); 
+    .from($("nav .icons"), 0.5, { opacity: 0, onComplete: buttonHide, onReverseComplete: buttonShow }, "-=1"); 
 
 
 $("#menu").click(function() {
@@ -560,11 +561,14 @@ slideShow
        .add(TweenMax.staggerTo(["#logo1", "#title", "#heroText h3", "#heroText h4"], 0.5, { opacity: 0, top: -20 }, 0.20), "-=0.5")
         .to("#introKids", 0.5, {opacity: 0, bottom: -20, onComplete: seekSlide, onCompleteParams: [1]}, "-=0.5")
       .from("#slide1 h1", 1, {opacity: 0, bottom: -20, onReverseComplete: seekSlide, onReverseCompleteParams: [0]}, "+=1.5")
+      .from(".arrow_container", 1, {opacity: 0, right: "10em" }, "+=1.5")
+      .from(".navArrows", 1, {opacity: 0 }, "-=1")
 
         // Slide 2 - Sponsorship counter and zoomer
   .addPause()
   .addLabel("slide2")
         .to("#slide1 h1", 0.5, { opacity: 0,  top: "+=10", onComplete: seekSlide, onCompleteParams: [2], onStart: updateText, onStartParams: [sponsLetter, 1, "sponsorshipText"], onReverseComplete: seekSlide, onReverseCompleteParams: [1]})
+         .to(".arrow_container", 0.5, {opacity: 0}, "-=0.5")
        .add([TweenMax.staggerFrom(["#sponsorshipNumber","#sponsorshipText"], 3, { opacity: 0, bottom: -20 }, 0.5),
              TweenLite.to(numberCounter, 3, { number: sponsLetter[1].number, roundProps:"number", onUpdate: updateCounter, onUpdateParams: ["sponsorshipNumber"], ease:Linear.easeNone}),
              TweenLite.to("#slide2", 4, { backgroundSize: "1300px 1300px" })], "+=0.5")
@@ -603,7 +607,7 @@ slideShow
         // Slide 5 - Message
   .addPause()
   .addLabel("slide5")
-        .to("#slide4 .story-box", 0.5, { opacity: 0, top: 20 })
+        .to("#slide4 .story-box", 0.5, { opacity: 0, top: 20, onComplete: slideIn, onCompleteParams: [4]})
       .from("#slide5 h1", 1,  {opacity: 0, bottom: -40, onStart: seekSlide, onStartParams: [5], onComplete : worldToggle, onReverseComplete: seekSlide, onReverseCompleteParams: [4] }) // Fade in
         
 
@@ -790,7 +794,8 @@ slideShow
   .addPause()
   .addLabel("slide23")
         .to("#slide22 h1", 0.5, { opacity: 0,  top: "+=10", onStart: seekSlide, onStartParams: [23]})
-      .from("#bibleVerseAnimate", 3, { opacity: 0, top: 20, onReverseComplete: seekSlide, onReverseCompleteParams: [22] }, "+=1");
+      .from("#bibleVerseAnimate", 3, { opacity: 0, top: 20, onReverseComplete: seekSlide, onReverseCompleteParams: [22] }, "+=1")
+      .from(".actionButtons", 3, { opacity: 0, top: 20 }, "-=2");
 
 // Prevent weird reverse behaviour
 
@@ -825,12 +830,12 @@ $("#footer aside li:nth-child(3)").click(function() {
     slideShow.play("slide2"); }, 100);
 });
 $("#footer aside li:nth-child(4)").click(function() {
-    slideShow.play("slide5");
+    slideShow.play("slide4");
     setTimeout(
   function() 
   {
-    seekSlide(5);
-    slideShow.play("slide5"); }, 100);
+    seekSlide(4);
+    slideShow.play("slide4"); }, 100);
 });
 $("#footer aside li:nth-child(5)").click(function() {
     slideShow.play("slide6");

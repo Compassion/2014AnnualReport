@@ -33,7 +33,7 @@
     
     <body>
         <div id="outerContainer">
-            <button class="menu" id="menu"><h3><span>&#x2261;</span> MENU</h3></button>
+            <button class="menu" id="menu"><h3><img src="/img/Tasty_Burger.fw.png" /> MENU</h3></button>
             
             <div class="navArrows" id="navArrows">
                 <img src="img/Up_Arrow.fw.png" class="navArrow navUp" id="navUp" />
@@ -255,7 +255,7 @@
                             <span id="growthA">0.00</span>%
                             <!--5.69%-->
                         </h1>
-                        <p class="large-paragraph relative">revenue growth</p>
+                        <p class="large-paragraph relative">revenue growth:<br /> that’s something to celebrate!</p>
                     </div>
                 </div>
             </section>
@@ -440,6 +440,24 @@
                 <div class="overlay bibleVerseOL">
                     <div id="bibleVerseTrigger">
                         <div id="bibleVerseAnimate"></div>
+                        <div class="actionButtons">
+                                <div class="leftB">
+                                    <p class="story-paragraph">Share
+                                        <span>|</span>
+                                        <a href="https://www.facebook.com/sharer/sharer.php?u=http://compassionau2014annualreport.azurewebsites.net/"><img src="img/Z_MenuIcons_Facebook.svg" class="first" /></a> 
+                                        <a href="https://twitter.com/home?status=https://www.facebook.com/sharer/sharer.php?u=http://compassionau2014annualreport.azurewebsites.net/"><img src="img/Z_MenuIcons_Twitter.svg" class="second" /></a> 
+                                    </p> 
+                                    
+                                </div>  
+                                <div class="rightB">
+                                    <p class="story-paragraph">
+            
+                                        <a href="https://www.compassion.com.au"><img src="img/Z_MenuIcons_Skippy.svg" /> Visit our Site
+                                        </a>
+                                    </p>
+                                </div>
+
+                        </div>
                     </div>
                 </div>
             </section>  
@@ -477,8 +495,14 @@
                         <li><h3>Thank you from our CEO</h3></li>
                     </ul>
                 </aside>
+                <div class="arrow_container">
+                    <div class="arrow_box">
+                        <p class="story-paragraph">Hey! We’re here to help you navigate. </p>
+                    </div>
+                </div>
                 <div class="navigationIcons icons"> 
                     <ul>
+                        <li><a href="https://www.compassion.com.au/"><img src="img/Z_MenuIcons_Skippy.svg" /><h3>Home</h3></a></li>
                         <li><a href="http://auproddownloads.blob.core.windows.net/compassion/Compassion/website/annual_reports/Compassion_Australia_2014_Annual_Report.pdf?_ga=1.213403222.390033094.1406526875" download="Compassion Australia Annual Report 2014"><img src="img/Z_MenuIcons_Download.svg" /><h3>Download</h3></a></li>
                         <li><a href="http://auproddownloads.blob.core.windows.net/compassion/Compassion/website/annual_reports/Compassion_Australia_2014_Annual_Report.pdf?_ga=1.213403222.390033094.1406526875" target="_blank"><img src="img/Z_MenuIcons_Print.svg" /><h3>Print</h3></a></li>
                     </ul>
@@ -509,9 +533,11 @@
             $(document).bind('mousewheel', function(e) {
                 if(e.originalEvent.wheelDelta / 120 > 0) {
                     reverseTL();
+                    TweenLite.to(".arrow_container", 0.5, {opacity: 0 });
                     flash("#navUp");
                 } else {
                     advanceTL();
+                    TweenLite.to(".arrow_container", 0.5, {opacity: 0 });
                     flash("#navDown");
                 }
             });
@@ -520,25 +546,30 @@
                 switch(e.keyCode) {
                     case 32: // Space
                         $("#navDown").addClass("hover");
+                        TweenLite.to(".arrow_container", 10, {opacity: 0, right: "440em",  bottom: "440em", rotation: "-=1480deg" });
                         advanceTL();
                         //nextSlide();
                         break;
                     case 40: // Down
                         $("#navDown").addClass("hover");
+                        TweenLite.to(".arrow_container", 0.5, {opacity: 0 });
                         advanceTL();
                         //nextSlide();
                         break;
                     case 39: // Right
                         $("#navDown").addClass("hover");
+                        TweenLite.to(".arrow_container", 0.5, {opacity: 0 });
                         advanceTL();
                         break;
                     case 38: // Up
                         $("#navUp").addClass("hover");
+                        TweenLite.to(".arrow_container", 0.5, {opacity: 0 });
                         reverseTL();
                         //previousSlide();
                         break;
                     case 37: // Left
                         $("#navUp").addClass("hover");
+                        TweenLite.to(".arrow_container", 0.5, {opacity: 0 });
                         reverseTL();
                         break;
                     default:

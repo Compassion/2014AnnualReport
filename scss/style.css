@@ -789,10 +789,14 @@ button.menu {
   z-index: 300;
   border: none;
   border-bottom: solid thin transparent; }
+  button.menu img {
+    max-height: 1.2em;
+    display: inline-block; }
   button.menu h3 {
-    font-size: 1em;
+    font-size: 1.2em;
     margin: 0;
-    letter-spacing: 5px; }
+    letter-spacing: 5px;
+    vertical-align: top; }
     button.menu h3 span {
       font-size: 1.2em; }
   button.menu:hover {
@@ -824,7 +828,7 @@ nav {
       nav aside ul li.section.home {
         padding-top: 0.4em; }
       nav aside ul li.section h2 {
-        font-size: 1.3em;
+        font-size: 1.2em;
         padding-bottom: 0;
         margin: 0;
         text-align: left;
@@ -850,7 +854,7 @@ nav {
     margin: 0;
     clear: both; }
   nav h3 {
-    font-size: 1.2em;
+    font-size: 1em;
     letter-spacing: 2px;
     padding: 0;
     margin: 0;
@@ -864,8 +868,10 @@ nav {
       display: inline-block;
       line-height: 1.9em;
       color: white; }
-    nav .icons li:first-child {
+    nav .icons li {
       padding-bottom: 1em; }
+    nav .icons li:last-child {
+      padding-bottom: 0em; }
     nav .icons li {
       list-style: none;
       clear: both;
@@ -1374,5 +1380,78 @@ button {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
+
+#bibleVerseTrigger .actionButtons {
+  max-width: 384px;
+  margin: 0 auto;
+  opacity: 0.8;
+  position: relative;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
+  #bibleVerseTrigger .actionButtons:hover {
+    opacity: 1; }
+  #bibleVerseTrigger .actionButtons div {
+    float: left;
+    width: 49%; }
+  #bibleVerseTrigger .actionButtons .leftB {
+    float: left; }
+    #bibleVerseTrigger .actionButtons .leftB a {
+      float: right; }
+      #bibleVerseTrigger .actionButtons .leftB a .first {
+        margin-right: 14px; }
+      #bibleVerseTrigger .actionButtons .leftB a .second {
+        margin-right: 14px;
+        margin-left: 14px; }
+    #bibleVerseTrigger .actionButtons .leftB span {
+      float: right;
+      display: inline-block; }
+  #bibleVerseTrigger .actionButtons .rightB img {
+    float: left;
+    margin-right: 14px; }
+  #bibleVerseTrigger .actionButtons p {
+    text-align: center;
+    font-size: 21px;
+    margin: 0;
+    line-height: 42px; }
+  #bibleVerseTrigger .actionButtons img {
+    width: 2em; }
+  #bibleVerseTrigger .actionButtons a {
+    display: inline-block;
+    color: white;
+    text-decoration: none; }
+
+.arrow_container {
+  position: fixed;
+  bottom: 34px;
+  right: 7em;
+  max-width: 432px; }
+
+.arrow_box {
+  position: relative;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 2em;
+  box-shadow: -5px 14px 20px -13px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: -5px 14px 20px -13px rgba(0, 0, 0, 0.4); }
+  .arrow_box p {
+    margin: 0;
+    font-size: 24px; }
+
+.arrow_box:after {
+  left: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(255, 255, 255, 0);
+  border-left-color: rgba(255, 255, 255, 0.3);
+  border-width: 18px;
+  margin-top: -18px; }
+
+#slide21 img.relative {
+  top: 40px; }
 
 /*# sourceMappingURL=style.css.map */
