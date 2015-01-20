@@ -8,16 +8,14 @@
         
         <script type="text/javascript">
             function isMobile() {
-   console.log("Navigator: " + navigator.userAgent);
-   return /(iphone|ipod|ipad|android|blackberry|windows ce|palm|symbian)/i.test(navigator.userAgent);
- };
+           console.log("Navigator: " + navigator.userAgent);
+           return /(iphone|ipod|ipad|android|blackberry|windows ce|palm|symbian)/i.test(navigator.userAgent);
+            };
             var mobile = isMobile();
-            
+
             if(mobile === true) { 
                 window.location.replace("mobile.html"); 
-            }
-            
-            
+        }
         </script>
         
         <script src="http://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
@@ -444,15 +442,15 @@
                                 <div class="leftB">
                                     <p class="story-paragraph">Share
                                         <span>|</span>
-                                        <a href="https://www.facebook.com/sharer/sharer.php?u=http://compassionau2014annualreport.azurewebsites.net/"><img src="img/Z_MenuIcons_Facebook.svg" class="first" /></a> 
-                                        <a href="https://twitter.com/home?status=https://www.facebook.com/sharer/sharer.php?u=http://compassionau2014annualreport.azurewebsites.net/"><img src="img/Z_MenuIcons_Twitter.svg" class="second" /></a> 
+                                        <a href="https://www.facebook.com/sharer/sharer.php?u=http://compassionau2014annualreport.azurewebsites.net/" target="_blank"><img src="img/Z_MenuIcons_Facebook.svg" class="first" /></a> 
+                                        <a href="https://twitter.com/home?status=https://www.facebook.com/sharer/sharer.php?u=http://compassionau2014annualreport.azurewebsites.net/" target="_blank"><img src="img/Z_MenuIcons_Twitter.svg" class="second" /></a> 
                                     </p> 
                                     
                                 </div>  
                                 <div class="rightB">
                                     <p class="story-paragraph">
             
-                                        <a href="https://www.compassion.com.au"><img src="img/Z_MenuIcons_Skippy.svg" /> Visit our Site
+                                        <a href="https://www.compassion.com.au"><img src="img/Z_MenuIcons_Skippy.svg" /> Return home
                                         </a>
                                     </p>
                                 </div>
@@ -477,7 +475,7 @@
                 </div> -->   
                 <aside>
                     <ul>
-                        <li class="section home"><h2>Home</h2></li>
+                        <li class="section home"><h2>Introduction</h2></li>
                         <li class="section"><h2>Sponsorship</h2></li>
                         <li><h3>Sponsorship in numbers</h3></li>
                         <li><h3>Julius's Story</h3></li>
@@ -502,7 +500,7 @@
                 </div>
                 <div class="navigationIcons icons"> 
                     <ul>
-                        <li><a href="https://www.compassion.com.au/"><img src="img/Z_MenuIcons_Skippy.svg" /><h3>Compassion Australia</h3></a></li>
+                        <li><a href="https://www.compassion.com.au/"><img src="img/Z_MenuIcons_Skippy.svg" /><h3>Home</h3></a></li>
                         <li><a href="http://auproddownloads.blob.core.windows.net/compassion/Compassion/website/annual_reports/Compassion_Australia_2014_Annual_Report.pdf?_ga=1.213403222.390033094.1406526875" download="Compassion Australia Annual Report 2014"><img src="img/Z_MenuIcons_Download.svg" /><h3>Download</h3></a></li>
                         <li><a href="http://auproddownloads.blob.core.windows.net/compassion/Compassion/website/annual_reports/Compassion_Australia_2014_Annual_Report.pdf?_ga=1.213403222.390033094.1406526875" target="_blank"><img src="img/Z_MenuIcons_Print.svg" /><h3>Print</h3></a></li>
                     </ul>
@@ -524,7 +522,10 @@
         
         <!-- Trigger intro on finish load -->
         <script type="text/javascript">
-            Pace.once("done", function() { slideShow.play(); });
+            Pace.once("done", function() { 
+                seekSlide(0);
+                slideShow.play(); 
+            });
             $("body").css("overflow", "hidden");
         </script>
         
@@ -533,11 +534,11 @@
             $(document).bind('mousewheel', function(e) {
                 if(e.originalEvent.wheelDelta / 120 > 0) {
                     reverseTL();
-                    TweenLite.to(".arrow_container", 0.5, {opacity: 0 });
+                    //$(".arrow_container").attr("opacity", "0");
                     flash("#navUp");
                 } else {
                     advanceTL();
-                    TweenLite.to(".arrow_container", 0.5, {opacity: 0 });
+                    //$(".arrow_container").attr("opacity", "0");
                     flash("#navDown");
                 }
             });
@@ -552,24 +553,20 @@
                         break;
                     case 40: // Down
                         $("#navDown").addClass("hover");
-                        TweenLite.to(".arrow_container", 0.5, {opacity: 0 });
                         advanceTL();
                         //nextSlide();
                         break;
                     case 39: // Right
                         $("#navDown").addClass("hover");
-                        TweenLite.to(".arrow_container", 0.5, {opacity: 0 });
                         advanceTL();
                         break;
                     case 38: // Up
                         $("#navUp").addClass("hover");
-                        TweenLite.to(".arrow_container", 0.5, {opacity: 0 });
                         reverseTL();
                         //previousSlide();
                         break;
                     case 37: // Left
                         $("#navUp").addClass("hover");
-                        TweenLite.to(".arrow_container", 0.5, {opacity: 0 });
                         reverseTL();
                         break;
                     default:
@@ -599,7 +596,8 @@
                 }
             });
             
-        </script>
+            
+        </script> 
     </body>
     
 </html>

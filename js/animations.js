@@ -324,7 +324,6 @@ for(var i=0 ;i < numRowsEG1;i++){
 
 // JQUERY STUFF
 $("#navDown").click(function() {
-        TweenLite.to(".arrow_container", 0.5, {opacity: 0 });
         advanceTL();
     } 
 );
@@ -566,9 +565,10 @@ slideShow
 
         // Slide 2 - Sponsorship counter and zoomer
   .addPause()
-  .addLabel("slide2")
+  .addLabel("slide2")  
         .to("#slide1 h1", 0.5, { opacity: 0,  top: "+=10", onComplete: seekSlide, onCompleteParams: [2], onStart: updateText, onStartParams: [sponsLetter, 1, "sponsorshipText"], onReverseComplete: seekSlide, onReverseCompleteParams: [1]})
          .to(".arrow_container", 0.5, {opacity: 0}, "-=0.5")
+        .set(".arrow_container", {display: "none" })
        .add([TweenMax.staggerFrom(["#sponsorshipNumber","#sponsorshipText"], 3, { opacity: 0, bottom: -20 }, 0.5),
              TweenLite.to(numberCounter, 3, { number: sponsLetter[1].number, roundProps:"number", onUpdate: updateCounter, onUpdateParams: ["sponsorshipNumber"], ease:Linear.easeNone}),
              TweenLite.to("#slide2", 4, { backgroundSize: "1300px 1300px" })], "+=0.5")
@@ -619,7 +619,7 @@ slideShow
         // Letters part 1
        .set(numberCounter, {number: 44})
        .add([TweenMax.staggerFrom(["#lettersNum","#lettersText"], 3, { opacity: 0, bottom: -20 }, 0.5),
-             TweenLite.to(numberCounter, 3, { number: sponsLetter[6].number, roundProps:"number", onUpdate: updateCounter, onUpdateParams: ["lettersNum"], ease:Linear.easeNone })], "+=0.5")
+             TweenLite.to(numberCounter, 3, { number: sponsLetter[6].number, roundProps:"number", onUpdate: updateCounter, onUpdateParams: ["lettersNum"],  ease:Linear.easeNone })], "+=0.5")
 
         // Letters part 2
         /*
@@ -640,7 +640,7 @@ slideShow
 
         // Letters part 4
   .addPause("lettersP4", worldToggle)
-        .to("#lettersText", 0.5, {opacity: 0, bottom: "-=20", onComplete: updateText, onCompleteParams: [sponsLetter, 7, "lettersText"], onStart : worldToggle })
+        .to("#lettersText", 0.5, {opacity: 0, bottom: "-=20", onComplete: updateText, onCompleteParams: [sponsLetter, 7, "lettersText"], onStart : worldToggle, onReverseComplete: updateText, onReverseCompleteParams: [sponsLetter, 6, "lettersText"] })
 
        .set(numberCounter, {number: 44})
        .add([
@@ -649,7 +649,7 @@ slideShow
             ])
         // Letters part 5
   .addPause("lettersP5", worldToggle)
-        .to("#lettersText", 0.5, {opacity: 0, bottom: "-=20", onComplete: updateText, onCompleteParams: [sponsLetter, 8, "lettersText"], onStart : worldToggle })
+        .to("#lettersText", 0.5, {opacity: 0, bottom: "-=20", onComplete: updateText, onCompleteParams: [sponsLetter, 8, "lettersText"], onStart : worldToggle, onReverseComplete: updateText, onReverseCompleteParams: [sponsLetter, 7, "lettersText"]  })
         .set(numberCounter, {number: 0})
        .add([
              TweenLite.to(numberCounter, 2.5, { number: sponsLetter[8].number, roundProps:"number", onUpdate: updateCounter, onUpdateParams: ["lettersNum"], ease:Linear.easeNone}),
