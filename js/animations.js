@@ -571,20 +571,20 @@ slideShow
         .set(".arrow_container", {display: "none" })
        .add([TweenMax.staggerFrom(["#sponsorshipNumber","#sponsorshipText"], 3, { opacity: 0, bottom: -20 }, 0.5),
              TweenLite.to(numberCounter, 3, { number: sponsLetter[1].number, roundProps:"number", onUpdate: updateCounter, onUpdateParams: ["sponsorshipNumber"], ease:Linear.easeNone}),
-             TweenLite.to("#slide2", 4, { backgroundSize: "1300px 1300px" })], "+=0.5")
+             TweenLite.to("#slide2", 4, { backgroundSize: "1300px 1301px" })], "+=0.5")
 
         // Count Slide 3 part 2
   .addPause()
         .to("#sponsorshipText", 0.5,  {opacity: 0, bottom: "-=20", onComplete: updateText, onCompleteParams: [sponsLetter, 2, "sponsorshipText"], onReverseComplete: updateText, onReverseCompleteParams: [sponsLetter, 1, "sponsorshipText"]})
        .add([TweenLite.to(numberCounter, 4, { number: sponsLetter[2].number, roundProps:"number", onUpdate: updateCounter, onUpdateParams: ["sponsorshipNumber"], ease:Linear.easeNone}),
-             TweenLite.to("#slide2", 5, { backgroundSize: "900px 900px" }),
+             TweenLite.to("#slide2", 5, { backgroundSize: "900px 901px" }),
              TweenLite.to("#sponsorshipText", 4, { opacity: 1,  bottom: "+=20" })])
 
         // Count Slide 3 part 3
   .addPause()
         .to("#sponsorshipText", 0.5, {opacity: 0, bottom: "-=20", onComplete: updateText, onCompleteParams: [sponsLetter, 3, "sponsorshipText"], onReverseComplete: updateText, onReverseCompleteParams: [sponsLetter, 2, "sponsorshipText"]})
        .add([TweenLite.to(numberCounter, 5, { number: sponsLetter[3].number, roundProps:"number", onUpdate: updateCounter, onUpdateParams: ["sponsorshipNumber"], ease:Linear.easeNone}),
-             TweenLite.to("#slide2", 6, { backgroundSize: "400px 400px" }),
+             TweenLite.to("#slide2", 6, { backgroundSize: "400px 401px" }),
              TweenLite.to("#sponsorshipText", 4, { opacity: 1, bottom: "+=20" })])
 
          
