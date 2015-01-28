@@ -348,6 +348,9 @@ html {
   @media screen and (max-width: 1440px) {
     .kidsBG {
       background-position: center 250%; } }
+  @media screen and (max-height: 656px) {
+    .kidsBG {
+      background-position: center 850%; } }
 
 .hero1 {
   background: url(/img/1_Sponsor_Story_Kids_tiny.png);
@@ -954,6 +957,9 @@ html, body {
 @media screen and (min-width: 1020px) and (max-width: 1700px) and (min-height: 710px) and (max-height: 849px) {
   nav {
     font-size: 12px; } }
+@media screen and (min-width: 1020px) and (max-width: 1700px) and (max-height: 656px) {
+  nav aside ul li.section {
+    padding: 1em 3em 0.5em; } }
 
 .slide {
   height: 100%;
@@ -1091,6 +1097,9 @@ h1 .sub {
   display: block;
   max-width: 100%;
   position: relative; }
+  @media screen and (max-height: 656px) {
+    .title {
+      margin: 0 auto; } }
 
 .heroText h3 {
   position: relative;
@@ -1328,6 +1337,12 @@ button.close {
   margin: 0 auto;
   position: relative; }
   @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    #bibleVerseAnimate {
+      background-size: 600px 2400px;
+      width: 600px;
+      height: 600px;
+      background-position: 0 0 !important; } }
+  @media screen and (max-width: 1440px) {
     #bibleVerseAnimate {
       background-size: 600px 2400px;
       width: 600px;
