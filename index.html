@@ -24,6 +24,7 @@
 ' />
         <meta name="twitter:image:src" content="http://2014.compassion.com.au/img/Twitter_BannerPreview2.jpg" />
 
+       
         <script type="text/javascript">
             function isMobile() {
            console.log("Navigator: " + navigator.userAgent);
@@ -101,7 +102,7 @@
                                         <h3 id="heroCA1" class="relative">Compassion Australia</h3>
                                         <h4 id="heroCA2" class="relative">2013/14</h4>
                                     </div>
-                                    <img src="img/0_Home_kids_tiny.png" class="introKids relative" id="introKids" />
+                                    <!--<img src="img/0_Home_kids_tiny.png" class="introKids relative" id="introKids" />-->
                                     <div id="downButton"></div>
                                 </div>
                             </div>
@@ -111,8 +112,8 @@
             </section>
             
             <!-- Message -->
-            <section class="slide slide2" id="slide1">
-                <div class="content">
+            <section class="slide slide2 table" id="slide1">
+                <div class="content cell">
                     <h1 class="d relative">You made it an <br />amazing year. 
                         <span class="sub">Let’s look at some highlights.</span></h1>
                 </div> 
@@ -120,8 +121,8 @@
             
             <!-- Sponsorship -->
             <section class="slide slide3 sponsorshipSpectrum" id="slide2">
-                <div class="overlay">
-                    <div class="content">
+                <div class="overlay table">
+                    <div class="content cell">
                         <h1 id="sponsorshipNumber" class="s relative">0</h1>
                         <p class="large-paragraph relative" id="sponsorshipText">Children sponsored worldwide</p>
                         <!-- There will be three stats here, essentially three slides -->
@@ -130,8 +131,8 @@
             </section>
             
             <!-- Message -->
-            <section class="slide slide6" id="slide3">
-                <div class="content">
+            <section class="slide slide6 table" id="slide3">
+                <div class="content cell">
                     <h1 class="d">BEING SPONSORED HELPS CHILDREN IN NEED. 
                         <span class="sub">Children like Julius.</span></h1>
                 </div> 
@@ -140,27 +141,29 @@
             
             <!-- Story -->
             <section class="slide slide7 story1" id="slide4">
-                <img src="img/1_Sponsor_Story_Kids_tiny.png" class="relative" />
-                <div class="darken"></div>
-                <div class="story-box" id="storyBox1">
-                    <h2>JULIUS'S STORY</h2>
-                    <p class="small-paragraph">
-                        When their mother died, Julius's grandma took the seven year old and his younger brother, Joseph, in. Their grandma worked hard in their Kenyan community as a farm labourer, but her small wage meant she struggled to put food on the table for her two growing grandsons.
-                    </p>
-                    <button id="story1Btn"><h4>READ MORE</h4></button>
-                </div>
-                <div class="story-panel" id="storyContent1">
-                    <article>
-                        <button class="close" id="story1Close"><img src="img/Cross.fw.png" /></button>
-                        
-                        <iframe src="stories/CDSP_Story.html" frameborder="0" ></iframe>
-                    </article>
+                <div class="hero1">
+                    <!--<img src="img/1_Sponsor_Story_Kids_tiny.png" class="relative" />-->
+                    <div class="darken"></div>
+                    <div class="story-box" id="storyBox1">
+                        <h2>JULIUS'S STORY</h2>
+                        <p class="small-paragraph">
+                            When their mother died, Julius's grandma took the seven year old and his younger brother, Joseph, in. Their grandma worked hard in their Kenyan community as a farm labourer, but her small wage meant she struggled to put food on the table for her two growing grandsons.
+                        </p>
+                        <button id="story1Btn"><h4>READ MORE</h4></button>
+                    </div>
+                    <div class="story-panel" id="storyContent1">
+                        <article>
+                            <button class="close" id="story1Close"><img src="img/Cross.fw.png" /></button>
+
+                            <iframe src="stories/CDSP_Story.html" frameborder="0" ></iframe>
+                        </article>
+                    </div>
                 </div>
             </section>
             
             <!-- Message -->
-            <section class="slide slide8" id="slide5">
-                <div class="content">
+            <section class="slide slide8 table" id="slide5">
+                <div class="content cell">
                     <h1 class="d">LETTERS BUILD RELATIONSHIPS. 
                         <span class="sub">And you built a lot!</span></h1>
                 </div> 
@@ -169,8 +172,8 @@
             <!-- Letter Writing -->
             <section class="slide slide9 letterWritingPaper" id="slide6">
                 <div class="overlay">
-                    <div class="content" id="world">
-                        <div class="" id="lettersContainer">
+                    <div class="content table" id="world">
+                        <div class="cell" id="lettersContainer">
                             <h1 id="lettersNum" class="s">0</h1>
                             <p class="large-paragraph relative" id="lettersText">letters written this year</p>
                             <!-- This counts as 5 slides due to 5 stats -->
@@ -180,8 +183,8 @@
             </section>
             
             <!-- Message -->
-            <section class="slide slide14" id="slide7">
-                <div class="content">
+            <section class="slide slide14 table" id="slide7">
+                <div class="content cell">
                     <h1 class="d n">And they made a <br />huge difference.
 </h1>
                 </div> 
@@ -190,27 +193,29 @@
             
             <!-- Story -->
             <section class="slide slide15 story2" id="slide8">
-                <img src="img/2_LetterWriting_Story_Kids_tiny.png" />
-                <div class="darken"></div>
-                <div class="story-box" id="storyBox2">
-                    <h2>LOVE LETTERS</h2>
-                    <p class="small-paragraph">
-                        In financial year 2014, Australian sponsors sent over 162,000 letters to sponsored children around the world. Three very different people: a 70-year-old translator from Thailand, a young boy from Honduras, and a university student from Brazil describe the impact that sponsors' letters have had on their lives.
-                    </p>
-                    <button id="story2Btn"><h4>READ MORE</h4></button>
-                </div>
-                <div class="story-panel" id="storyContent2">
-                    <article>
-                        <button class="close" id="story2Close"><img src="img/Cross.fw.png" /></button>
-                        <iframe src="stories/Letter_Story.html" frameborder="0" ></iframe>
-                    </article>
+                <div class="hero2">
+                    <!--<img src="img/2_LetterWriting_Story_Kids_tiny.png" />-->
+                    <div class="darken"></div>
+                    <div class="story-box" id="storyBox2">
+                        <h2>LOVE LETTERS</h2>
+                        <p class="small-paragraph">
+                            In financial year 2014, Australian sponsors sent over 162,000 letters to sponsored children around the world. Three very different people: a 70-year-old translator from Thailand, a young boy from Honduras, and a university student from Brazil describe the impact that sponsors' letters have had on their lives.
+                        </p>
+                        <button id="story2Btn"><h4>READ MORE</h4></button>
+                    </div>
+                    <div class="story-panel" id="storyContent2">
+                        <article>
+                            <button class="close" id="story2Close"><img src="img/Cross.fw.png" /></button>
+                            <iframe src="stories/Letter_Story.html" frameborder="0" ></iframe>
+                        </article>
+                    </div>
                 </div>
             </section>
             
             
             <!-- Message -->
-            <section class="slide slide16" id="slide9">
-                <div class="content">
+            <section class="slide slide16 table" id="slide9">
+                <div class="content cell">
                     <h1 class="d n">LET’S LOOK AT THIS<br /> YEAR’S NUMBERS.
                         </h1>
                 </div> 
@@ -281,8 +286,8 @@
             </section>
               
             <!-- Message -->
-            <section class="slide slide19" id="slide12">
-                <div class="content">
+            <section class="slide slide19 table" id="slide12">
+                <div class="content cell">
                     <h1 class="t">THE NUMBERS SHOW <br />HOW MUCH WE<br /> GREW THIS YEAR.</h1>
                 </div> 
             </section>   
@@ -293,8 +298,8 @@
                     <source src="media/Balloons.webm" type="video/webm">
                     <source src="media/Balloons.mp4" type="video/mp4">
                 </video>
-                <div class="content overlay" id="bgVideoOverlay">
-                    <div id="revGrowth">
+                <div class="content overlay table" id="bgVideoOverlay">
+                    <div id="revGrowth" class="cell">
                         <h1 class="s">
                             <span id="growthA">0.00</span>%
                             <!--5.69%-->
@@ -305,8 +310,8 @@
             </section>
             
             <!-- Message -->
-            <section class="slide slide21" id="slide14">
-                <div class="content">
+            <section class="slide slide21 table" id="slide14">
+                <div class="content cell">
                     <h1 class="d">You responded <Br />to disaster.
                         <span class="sub">And helped children like Michaela.</span>
                     </h1>
@@ -315,27 +320,29 @@
             
             <!-- Story -->
             <section class="slide slide22 story3" id="slide15">
-                <img src="img/3_Finance_Story_Kids_tiny.png" />
-                <div class="darken"></div>
-                <div class="story-box" id="storyBox2">
-                    <h2>MICHAELA'S STORY</h2>
-                    <p class="small-paragraph">
-                        On 8 November 2013, one of the strongest tropical cyclones on record hit the Philippines. Thousands of Compassion supporters gave generously; raising $679,000 to help Filipinos survive the initial disaster and get back on their feet. 
-                    </p>
-                    <button id="story3Btn"><h4>READ MORE</h4></button>
-                </div>
-                <div class="story-panel" id="storyContent3">
-                    <article>
-                        <button class="close" id="story3Close"><img src="img/Cross.fw.png" /></button>
-                        <iframe src="stories/Philippines_Story.html" frameborder="0" ></iframe>
-                    </article>
+                <div class="hero3">
+                    <!--<img src="img/3_Finance_Story_Kids_tiny.png" />-->
+                    <div class="darken"></div>
+                    <div class="story-box" id="storyBox2">
+                        <h2>MICHAELA'S STORY</h2>
+                        <p class="small-paragraph">
+                            On 8 November 2013, one of the strongest tropical cyclones on record hit the Philippines. Thousands of Compassion supporters gave generously; raising $679,000 to help Filipinos survive the initial disaster and get back on their feet. 
+                        </p>
+                        <button id="story3Btn"><h4>READ MORE</h4></button>
+                    </div>
+                    <div class="story-panel" id="storyContent3">
+                        <article>
+                            <button class="close" id="story3Close"><img src="img/Cross.fw.png" /></button>
+                            <iframe src="stories/Philippines_Story.html" frameborder="0" ></iframe>
+                        </article>
+                    </div>
                 </div>
             </section>
             
             
             <!-- Message -->
-            <section class="slide slide23" id="slide16">
-                <div class="content">
+            <section class="slide slide23 table" id="slide16">
+                <div class="content cell">
                     <h1 class="d n">Check out some <br />more highlights.</h1>
                 </div> 
             </section>
@@ -386,8 +393,8 @@
             </section>
             
             <!-- Message -->
-            <section class="slide slide25" id="slide18">
-                <div class="content">
+            <section class="slide slide25 table" id="slide18">
+                <div class="content cell">
                     <h1 class="d n">Here’s how we <br />worked together.</h1>
                 </div> 
             </section>
@@ -439,16 +446,16 @@
             
             
             <!-- Message -->
-            <section class="slide slide27" id="slide20">
-                <div class="content">
+            <section class="slide slide27 table" id="slide20">
+                <div class="content cell">
                     <h1 class="d n">Thank you <br />from our CEO.</h1>
                 </div> 
             </section>
             
             <!-- Tim's letter -->
             <section class="slide slide28" id="slide21">
-                <div class="content">
-                    <img src="img/5_Thankyou_Tim_tiny.png" class="relative" />
+                <div class="content hero4">
+                    <!--<img src="img/5_Thankyou_Tim_tiny.png" class="relative" />-->
                     <div class="tim-message">
                         <article>
                         <h2>From Tim Hanna</h2>
@@ -473,8 +480,8 @@
             
                 
             <!-- Message -->
-            <section class="slide slide29" id="slide22">
-                <div class="content">
+            <section class="slide slide29 table" id="slide22">
+                <div class="content cell">
                     <h1 class="t tt">THANK YOU FOR<br /> RELEASING CHILDREN<br /> FROM POVERTY.</h1>
                 </div> 
             </section>

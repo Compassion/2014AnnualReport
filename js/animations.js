@@ -549,7 +549,7 @@ slideShow
         // Slide 0 - Intro - Autoplay intro when loaded
   .addLabel("slide0")
         .to("#introFade", 2, {opacity: 1, onReverseComplete: rStop}, "+=1")
-      .from("#introKids", 1, {opacity: 0, bottom: -10}, "-=1")
+      .from(".kidsBG", 1, {opacity: 0, bottom: -10}, "-=1")
        .add(TweenMax.staggerFrom(["#logo1", "#title"], 1, { opacity: 0, bottom: -20 }, 1), "+=1")
        .add([TweenMax.staggerFrom(["#heroText h3", "#heroText h4"], 1, { opacity: 0, bottom: -20 }, 0.25), TweenMax.from("#downButton", 1, { opacity: 0 })])
 
@@ -558,7 +558,7 @@ slideShow
   .addLabel("slide1")
         .to("#downButton", 0.5, { opacity: 0})
        .add(TweenMax.staggerTo(["#logo1", "#title", "#heroText h3", "#heroText h4"], 0.5, { opacity: 0, top: -20 }, 0.20), "-=0.5")
-        .to("#introKids", 0.5, {opacity: 0, bottom: -20, onComplete: seekSlide, onCompleteParams: [1]}, "-=0.5")
+        .to(".kidsBG", 0.5, {opacity: 0, bottom: -20, onComplete: seekSlide, onCompleteParams: [1]}, "-=0.5")
       .from("#slide1 h1", 1, {opacity: 0, bottom: -20, onReverseComplete: seekSlide, onReverseCompleteParams: [0]}, "+=1.5")
       .from(".arrow_container", 1, {opacity: 0, right: "10em" }, "+=1.5")
       .from(".navArrows", 1, {opacity: 0 }, "-=1")
@@ -602,7 +602,7 @@ slideShow
   .addLabel("slide4")
         .to("#slide3 h1", 0.5, { opacity: 0,  top: "+=10", onStart: seekSlide, onStartParams: [4]}) // Fade out
       .from("#slide4 .story-box", 1, { opacity: 0, top: 20 })
-      .to("#slide4 > img", 0.5, { bottom: "-=60px", onReverseComplete: seekSlide, onReverseCompleteParams: [3]}, "-=1")
+      .from(".hero1", 0.5, { bottom: "-=60px", onReverseComplete: seekSlide, onReverseCompleteParams: [3]}, "-=1")
 
         // Slide 5 - Message
   .addPause()
@@ -620,23 +620,6 @@ slideShow
        .set(numberCounter, {number: 44})
        .add([TweenMax.staggerFrom(["#lettersNum","#lettersText"], 3, { opacity: 0, bottom: -20 }, 0.5),
              TweenLite.to(numberCounter, 3, { number: sponsLetter[6].number, roundProps:"number", onUpdate: updateCounter, onUpdateParams: ["lettersNum"],  ease:Linear.easeNone })], "+=0.5")
-
-        // Letters part 2
-        /*
-  .addPause("lettersP2", worldToggle)
-        .to("#lettersText", 0.5, {opacity: 0, bottom: "-=20", onComplete: updateText, onCompleteParams: [sponsLetter, 5, "lettersText"], onStart : worldToggle })
-       .add([
-             TweenLite.to(numberCounter, 2.5, { number: sponsLetter[5].number, roundProps:"number", onUpdate: updateCounter, onUpdateParams: ["lettersNum"], ease:Linear.easeNone}),
-             TweenLite.to("#lettersText", 2.5, { opacity: 1,  bottom: "+=20" })
-            ])
-
-        // Letters part 3
-  .addPause("lettersP3", worldToggle)
-        .to("#lettersText", 0.5, {opacity: 0, bottom: "-=20", onComplete: updateText, onCompleteParams: [sponsLetter, 6, "lettersText"], onStart : worldToggle })
-       .add([
-             TweenLite.to(numberCounter, 2.5, { number: sponsLetter[6].number, roundProps:"number", onUpdate: updateCounter, onUpdateParams: ["lettersNum"], ease:Linear.easeNone}),
-             TweenLite.to("#lettersText", 2.5, { opacity: 1,  bottom: "+=20" })
-            ]) */
 
         // Letters part 4
   .addPause("lettersP4", worldToggle)
@@ -667,8 +650,7 @@ slideShow
   .addPause()
   .addLabel("slide8")
         .add([TweenLite.to("#slide7 h1", 0.5, { opacity: 0,  top: "+=10", onStart: seekSlide, onStartParams: [8]}),
-              TweenLite.fromTo("#slide8 > img", 1.5, { bottom: 120 }, { bottom: "-40px" }), 
-              TweenLite.from("#slide8 .story-box", 1.5, { top: 320 })
+              TweenLite.from("#slide8 .story-box", 1.5, { top: 320, opacity: 0 })
              ])
         .to("#slide8", 0.1, { onReverseComplete: seekSlide, onReverseCompleteParams: [7] })
 
@@ -736,7 +718,6 @@ slideShow
   .addPause()
   .addLabel("slide15")
         .add([TweenLite.to("#slide14 h1", 0.5, { opacity: 0,  top: "+=10", onStart: seekSlide, onStartParams: [15]}),
-              TweenLite.from("#slide15 > img", 1.5, { bottom: 120 }), 
               TweenLite.from("#slide15 .story-box", 1.5, { top: 320 })
              ])
         .to("#slide15", 0.1, { onReverseComplete: seekSlide, onReverseCompleteParams: [14] }) 
@@ -779,14 +760,14 @@ slideShow
   .addPause()
   .addLabel("slide21")
         .to("#slide20 h1", 0.5, { opacity: 0,  top: "+=10", onStart: seekSlide, onStartParams: [21], onReverseComplete: seekSlide, onReverseCompleteParams: [20]})
-      .from($("#slide21 div > img"), 4, { opacity: 0, top: 20})
+      .from(".hero4", 4, { opacity: 0, top: 20})
        .add(TweenMax.staggerFrom($(".tim-message article *"), 0.8, { opacity: 0, top: 20}, 0.2), "-=2")
 
         
         // Slide 22 - Message
   .addPause()
   .addLabel("slide22")
-        .to($("#slide21 div > img"), 2, { opacity: 0, top: 20, onComplete: seekSlide, onCompleteParams: [22]})
+        .to(".hero4", 2, { opacity: 0, top: 20, onComplete: seekSlide, onCompleteParams: [22]})
        .add(TweenMax.staggerTo($(".tim-message article *"), 0.5, { opacity: 0, top: -20}, 0.05), "-=2")
       .from("#slide22 h1", 1, {opacity: 0, bottom: -40, onReverseComplete: seekSlide, onReverseCompleteParams: [21]}, "+=0.5") // Fade in
 

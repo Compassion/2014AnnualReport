@@ -335,6 +335,60 @@ html {
   background-attachment: fixed;
   background-size: cover; }
 
+.bg-set {
+  height: 100%; }
+  .bg-set .intro {
+    height: 100%; }
+
+.kidsBG {
+  background: url(/img/0_Home_kids_tiny.png);
+  background-repeat: no-repeat;
+  background-position: center 130%;
+  position: relative; }
+  @media screen and (max-width: 1440px) {
+    .kidsBG {
+      background-position: center 250%; } }
+
+.hero1 {
+  background: url(/img/1_Sponsor_Story_Kids_tiny.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  width: 100%;
+  height: 100%;
+  position: relative; }
+
+.hero2 {
+  background: url(/img/2_LetterWriting_Story_Kids_tiny.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  width: 100%;
+  height: 100%;
+  position: relative; }
+
+.hero3 {
+  background: url(/img/3_Finance_Story_Kids_tiny.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  width: 100%;
+  height: 100%;
+  position: relative; }
+
+.hero4 {
+  background: url(/img/5_Thankyou_Tim_tiny.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  width: 100%;
+  height: 100%;
+  position: relative; }
+  @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .hero4 {
+      background-position: 515% 5%;
+      background-size: auto; } }
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1004,26 +1058,11 @@ body.mobBod {
 h1 span {
   font-family: "Tetria LT W01 Black", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 h1.s {
-  padding-top: 20%;
   position: relative;
   line-height: 1.2; }
-  @media screen and (max-width: 1440px) {
-    h1.s {
-      padding-top: 28%; } }
 h1.d {
-  padding-top: 14%;
   position: relative;
   line-height: 1.2; }
-  h1.d.n {
-    padding-top: 18%; }
-  @media screen and (max-width: 1440px) {
-    h1.d {
-      padding-top: 24%; } }
-  @media screen and (max-width: 1440px) {
-    h1.d.tt {
-      padding-top: 18%; } }
-h1.t {
-  padding-top: 12%; }
 h1 .sub {
   display: block;
   font-size: 0.4em;
@@ -1107,7 +1146,23 @@ h1 .sub {
     width: 60%; }
 
   .story-box {
-    left: 48em; }
+    left: 60em; }
+    .story-box p.small-paragraph {
+      font-size: 1.5em; }
+
+  .story-panel {
+    width: 60%; } }
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .story1 > img, .story1 .content > img, .story2 > img, .story2 .content > img, .story3 > img, .story3 .content > img, .slide28 > img, .slide28 .content > img {
+    top: auto !important;
+    bottom: 0 !important;
+    position: absolute !important;
+    left: 0;
+    width: 60%; }
+
+  .story-box {
+    left: 50em;
+    width: 400px; }
     .story-box p.small-paragraph {
       font-size: 1.5em; }
 
@@ -1173,6 +1228,9 @@ button.close {
 
 #storyBox2 {
   width: 438px; }
+  @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    #storyBox2 {
+      width: 400px; } }
 
 .tim-message {
   position: absolute;
@@ -1269,6 +1327,12 @@ button.close {
   background-size: 800px 3200px;
   margin: 0 auto;
   position: relative; }
+  @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    #bibleVerseAnimate {
+      background-size: 600px 2400px;
+      width: 600px;
+      height: 600px;
+      background-position: 0 0 !important; } }
 
 #revenueGraph {
   background: url(/img/3_Finance_IncomeSprite.svg) 0 0 no-repeat;
@@ -1463,5 +1527,12 @@ button {
 
 #slide21 img.relative {
   top: 40px; }
+
+.table {
+  display: table;
+  width: 100%; }
+  .table .cell {
+    display: table-cell;
+    vertical-align: middle; }
 
 /*# sourceMappingURL=style.css.map */
